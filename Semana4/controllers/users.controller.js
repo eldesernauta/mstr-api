@@ -45,7 +45,7 @@ module.exports.login = (req, res, next) => {
 
     User.findOne({ email })
         .then((user) => {
-            if (user) {
+            if (user && user.active == true) {
                 user.checkPassword(password).then((match) => {
                     if (match) {
                         const token = jwt.sign(
