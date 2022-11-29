@@ -36,28 +36,6 @@
 			"response": []
 		},
 		{
-			"name": "Activate User",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/users/id/activate",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"users",
-						"id",
-						"activate"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "User Login",
 			"request": {
 				"method": "POST",
@@ -170,32 +148,6 @@
 					"path": [
 						"api",
 						"users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get User",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8000/api/users?id=",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"users"
-					],
-					"query": [
-						{
-							"key": "id",
-							"value": ""
-						}
 					]
 				}
 			},

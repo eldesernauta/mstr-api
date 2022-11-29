@@ -16,7 +16,7 @@ module.exports.auth = (req, res, next) => {
     try {
         const decoded = jwt.verify(token, "super secret!");
 
-        User.findOne({ _id: decoded.sub })
+        User.findOne({ _id: decoded.sub, active: true })
             .then((user) => {
                 if (user) {
                     req.user = user;

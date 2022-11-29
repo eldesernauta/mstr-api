@@ -20,6 +20,10 @@ const userSchema = new Schema({
     },
     bio: {
         type: String
+    },
+    active: {
+        type: Boolean,
+        default: false
     }
 }, {
     tymeStamp: true,

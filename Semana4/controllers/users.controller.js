@@ -24,6 +24,22 @@ module.exports.create = (req, res, next) => {
 
 }
 
+module.exports.activate = (req, res, next) => {
+    User.findByIdAndUpdate(
+        req.params.id,
+        { active: true },
+        { new: true, runValidators: true }
+    )
+        .then(user => {
+            if (user) {
+                res.json(user);
+            } else {
+                next(createError(404, "user not found"));
+            }
+        })
+        .catch(next);
+};
+
 module.exports.login = (req, res, next) => {
     const { email, password } = req.body
 

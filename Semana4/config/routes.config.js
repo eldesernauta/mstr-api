@@ -14,6 +14,7 @@ router.delete('/posts/:id', secure.auth, posts.delete);
 
 // Users Routes
 router.get('/users', users.list)
+router.get("/users/:id/activate", users.activate)
 router.post("/users", users.create)
 router.post("/login", users.login)
 
